@@ -54,6 +54,7 @@ podTemplate(
         echo "Running Unit Tests"
 
         // TBD: Execute Unit Tests
+        sh "${mvnCmd} test"
       }
 
       // Using Maven to call SonarQube for Code Analysis
