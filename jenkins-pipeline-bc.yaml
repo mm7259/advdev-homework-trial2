@@ -1,21 +1,21 @@
 kind: "BuildConfig"
 apiVersion: "v1"
 metadata:
-  name: "nodejs-sample-pipeline"
+  name: "jenkins-pipeline-bc"
 spec:
   strategy:
     jenkinsPipelineStrategy:
-      jenkinsfilePath: Jenkinsfile
+      jenkinsfilePath: "Jenkinsfile"
       env:
-        name: "GUID"
-        value: ${GUID}
-        name: "REPO"
-        value: "https://github.com/mm7259/advdev-homework-trial2.git"
-        name: "CLUSTER"
-        value: "master.na311.openshift.opentlc.com"
-    type: JenkinsPipeline
+        - name: "GUID"
+          value: "7cba"
+        - name: "REPO"
+          value: "https://github.com/mm7259/advdev-homework-trial2.git"
+        - name: "CLUSTER"
+          value: "master.na311.openshift.opentlc.com"
+    type: "JenkinsPipeline"
   source:
     contextDir: "openshift-tasks"
     git: 
       uri: "https://github.com/mm7259/advdev-homework-trial2.git"
-      ref: "master
+      ref: "master"

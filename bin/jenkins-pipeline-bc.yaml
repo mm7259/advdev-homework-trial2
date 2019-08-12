@@ -18,4 +18,4 @@ spec:
     contextDir: "openshift-tasks"
     git: 
       uri: "https://github.com/mm7259/advdev-homework-trial2.git"
-      ref: "master
+      ref: "master"
